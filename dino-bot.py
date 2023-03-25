@@ -2,11 +2,6 @@ from PIL import ImageGrab
 import time
 import pyautogui
 
-
-bg_color = (36, 36, 37)
-dino_color = (83, 83, 83)
-
-
 x_inicial = 353
 x_final = 516
 
@@ -20,7 +15,6 @@ def captura_tela():
     return screen
    
 
-
 def detecta_obj(screen, xi, xf):
     for x in range(xi,y_inicial):
         for y in range(xf, y_final):
@@ -31,12 +25,8 @@ def jump():
     pyautogui.press("up")
     
 
-
-
 print("Startting robot")
 while True:
-    
-
     screen = captura_tela()
     
     if detecta_obj(screen ,x_inicial, x_final):
